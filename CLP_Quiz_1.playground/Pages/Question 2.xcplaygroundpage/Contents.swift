@@ -17,29 +17,7 @@ import Foundation
 //[("a", "a"), ("a", "b"), ("a", "c"), ("b", "c"), ("c", "c")]
 
 func uniquePairs<Element: Comparable & Equatable>(input: Array<Element>) -> [(Element, Element)] {
-    var result = [(Element, Element)]()
-    var input = Array(input).sorted()
-
-    var outer = 0
-    while outer < input.count {
-        
-        var inner = outer + 1
-        while inner < input.count {
-            
-            let pair = (input[outer], input[inner])
-            result.append(pair)
-            inner += 1
-            while (inner < input.count && input[inner] == input[inner - 1]) {
-                inner += 1
-            }
-        }
-        
-        outer += 1
-        while (outer < input.count && input[outer] == input[outer - 1]) {
-            outer += 1
-        }
-    }
-    return result
+    []
 }
 
 

@@ -1,5 +1,8 @@
 import Foundation
 
+// NOTE: There are 2 pages in this playground.
+// There are a total of 2 questions, each on a separate page.
+
 // Write a function that takes an input string. The function prints each non-space character from the string, along with how many times the character occurs in the string. The letters should print from most-occurrences to least-occurrences.
 
 // Example 1
@@ -23,18 +26,6 @@ import Foundation
 
 func printCharacterOccurrencesAsceding(input: String) {
     
-    var dict = [Character: Int]()
-    for c in input {
-        dict[c, default: 0] += 1
-    }
-    var arr = Array(Set(input)).sorted { lhs, rhs in
-        let c1 = dict[lhs, default: 0]
-        let c2 = dict[rhs, default: 0]
-        return c1 > c2
-    }
-    for c in arr where c != " " {
-        print("\(c), \(dict[c, default: 0])")
-    }
 }
 
 print("====== Test 1")
